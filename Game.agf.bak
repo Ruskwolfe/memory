@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>27</AudioIndexer>
+      <AudioIndexer>30</AudioIndexer>
       <AutoMoveInWalkMode>True</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BinaryFilesInSourceControl>True</BinaryFilesInSourceControl>
@@ -739,6 +739,22 @@
           <UnloadedRoom>
             <Description xml:space="preserve">Skip ?</Description>
             <Number>12</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description xml:space="preserve">Engine Room</Description>
+            <Number>13</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description>Title</Description>
+            <Number>16</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description>Bedroom</Description>
+            <Number>17</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description>Hallway</Description>
+            <Number>18</Number>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -1720,7 +1736,7 @@
                 <Name>lblSaveText</Name>
                 <Text xml:space="preserve">Please choose the name to save this game as:</Text>
                 <TextAlignment>Left</TextAlignment>
-                <TextColor>19248</TextColor>
+                <TextColor>0</TextColor>
                 <Top>3</Top>
                 <Visible>True</Visible>
                 <Width>237</Width>
@@ -1738,7 +1754,7 @@
                 <OnActivate>txtNewSaveName_OnActivate</OnActivate>
                 <ShowBorder>True</ShowBorder>
                 <Text />
-                <TextColor>19248</TextColor>
+                <TextColor>0</TextColor>
                 <Top>31</Top>
                 <Visible>True</Visible>
                 <Width>170</Width>
@@ -1762,7 +1778,7 @@
                 <PushedImage>2161</PushedImage>
                 <Text>Save</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
-                <TextColor>19248</TextColor>
+                <TextColor>0</TextColor>
                 <Top>82</Top>
                 <Visible>True</Visible>
                 <Width>71</Width>
@@ -1786,7 +1802,7 @@
                 <PushedImage>2161</PushedImage>
                 <Text>Cancel</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
-                <TextColor>19248</TextColor>
+                <TextColor>0</TextColor>
                 <Top>132</Top>
                 <Visible>True</Visible>
                 <Width>71</Width>
@@ -1802,12 +1818,12 @@
                 <Locked>True</Locked>
                 <Name>lstSaveGamesList</Name>
                 <OnSelectionChanged>lstSaveGamesList_OnSelectionCh</OnSelectionChanged>
-                <SelectedBackgroundColor>19248</SelectedBackgroundColor>
-                <SelectedTextColor>32089</SelectedTextColor>
+                <SelectedBackgroundColor>19017</SelectedBackgroundColor>
+                <SelectedTextColor>65535</SelectedTextColor>
                 <ShowBorder>True</ShowBorder>
                 <ShowScrollArrows>True</ShowScrollArrows>
                 <TextAlignment>Left</TextAlignment>
-                <TextColor>19248</TextColor>
+                <TextColor>0</TextColor>
                 <Top>48</Top>
                 <Translated>False</Translated>
                 <Visible>True</Visible>
@@ -1832,7 +1848,7 @@
                 <PushedImage>2161</PushedImage>
                 <Text>Delete</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
-                <TextColor>19248</TextColor>
+                <TextColor>0</TextColor>
                 <Top>107</Top>
                 <Visible>True</Visible>
                 <Width>71</Width>
@@ -1871,7 +1887,7 @@
                 <Name>lblRestoreText</Name>
                 <Text xml:space="preserve">Please choose the game that you want to restore:</Text>
                 <TextAlignment>Left</TextAlignment>
-                <TextColor>19248</TextColor>
+                <TextColor>0</TextColor>
                 <Top>3</Top>
                 <Visible>True</Visible>
                 <Width>237</Width>
@@ -1895,7 +1911,7 @@
                 <PushedImage>2161</PushedImage>
                 <Text>Restore</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
-                <TextColor>19248</TextColor>
+                <TextColor>0</TextColor>
                 <Top>107</Top>
                 <Visible>True</Visible>
                 <Width>71</Width>
@@ -1919,7 +1935,7 @@
                 <PushedImage>2161</PushedImage>
                 <Text>Cancel</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
-                <TextColor>19248</TextColor>
+                <TextColor>0</TextColor>
                 <Top>132</Top>
                 <Visible>True</Visible>
                 <Width>71</Width>
@@ -1931,16 +1947,16 @@
                 <Font>0</Font>
                 <Height>119</Height>
                 <ID>3</ID>
-                <Left>6</Left>
+                <Left>8</Left>
                 <Locked>False</Locked>
                 <Name>lstRestoreGamesList</Name>
                 <OnSelectionChanged />
-                <SelectedBackgroundColor>19248</SelectedBackgroundColor>
-                <SelectedTextColor>32089</SelectedTextColor>
+                <SelectedBackgroundColor>21130</SelectedBackgroundColor>
+                <SelectedTextColor>65535</SelectedTextColor>
                 <ShowBorder>True</ShowBorder>
                 <ShowScrollArrows>True</ShowScrollArrows>
                 <TextAlignment>Left</TextAlignment>
-                <TextColor>19248</TextColor>
+                <TextColor>0</TextColor>
                 <Top>31</Top>
                 <Translated>False</Translated>
                 <Visible>True</Visible>
@@ -3048,12 +3064,12 @@
               <ID>16</ID>
               <Left>115</Left>
               <Name>gSkip</Name>
-              <OnClick />
+              <OnClick>gSkip_OnClick</OnClick>
               <PopupStyle>Normal</PopupStyle>
               <PopupYPos>0</PopupYPos>
               <Top>70</Top>
               <Transparency>0</Transparency>
-              <Visible>True</Visible>
+              <Visible>False</Visible>
               <Width>75</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
@@ -3121,6 +3137,100 @@
                 <Top>51</Top>
                 <Visible>True</Visible>
                 <Width>29</Width>
+                <ZOrder>2</ZOrder>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <BorderColor>2</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>200</Height>
+              <ID>17</ID>
+              <Left>0</Left>
+              <Name>gTitle</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>0</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>320</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>18</Height>
+                <ID>0</ID>
+                <Image>0</Image>
+                <Left>3</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Button2</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>Button2_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Game</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>17</Top>
+                <Visible>True</Visible>
+                <Width>85</Width>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>18</Height>
+                <ID>1</ID>
+                <Image>0</Image>
+                <Left>3</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Button3</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>Button3_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text>Continue</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>37</Top>
+                <Visible>True</Visible>
+                <Width>85</Width>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>18</Height>
+                <ID>2</ID>
+                <Image>0</Image>
+                <Left>3</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Button4</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>Button4_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text>Quit</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>60</Top>
+                <Visible>True</Visible>
+                <Width>85</Width>
                 <ZOrder>2</ZOrder>
               </GUIButton>
             </Controls>
@@ -3596,9 +3706,9 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>2016</SpeechColor>
             <SpeechView>8</SpeechView>
-            <StartX>125</StartX>
-            <StartY>182</StartY>
-            <StartingRoom>12</StartingRoom>
+            <StartX>1</StartX>
+            <StartY>1</StartY>
+            <StartingRoom>16</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -3762,11 +3872,11 @@
             <ScriptName>cBrah</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
-            <SpeechColor>16392</SpeechColor>
+            <SpeechColor>64031</SpeechColor>
             <SpeechView>25</SpeechView>
-            <StartX>416</StartX>
-            <StartY>488</StartY>
-            <StartingRoom>6</StartingRoom>
+            <StartX>299</StartX>
+            <StartY>317</StartY>
+            <StartingRoom>13</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -3806,8 +3916,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>32784</SpeechColor>
             <SpeechView>27</SpeechView>
-            <StartX>490</StartX>
-            <StartY>96</StartY>
+            <StartX>495</StartX>
+            <StartY>98</StartY>
             <StartingRoom>25</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -3848,8 +3958,8 @@
             <SpeechAnimationDelay>3</SpeechAnimationDelay>
             <SpeechColor>32784</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>79</StartX>
-            <StartY>170</StartY>
+            <StartX>120</StartX>
+            <StartY>178</StartY>
             <StartingRoom>25</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -3890,8 +4000,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>64512</SpeechColor>
             <SpeechView>30</SpeechView>
-            <StartX>65</StartX>
-            <StartY>174</StartY>
+            <StartX>18</StartX>
+            <StartY>186</StartY>
             <StartingRoom>22</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -3917,14 +4027,14 @@
             <Clickable>True</Clickable>
             <DiagonalLoops>True</DiagonalLoops>
             <ID>9</ID>
-            <IdleAnimationDelay>9</IdleAnimationDelay>
-            <IdleDelay>20</IdleDelay>
-            <IdleView>0</IdleView>
-            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <IdleAnimationDelay>12</IdleAnimationDelay>
+            <IdleDelay>25</IdleDelay>
+            <IdleView>50</IdleView>
+            <MovementLinkedToAnimation>False</MovementLinkedToAnimation>
             <MovementSpeed>3</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
             <MovementSpeedY>0</MovementSpeedY>
-            <NormalView>34</NormalView>
+            <NormalView>50</NormalView>
             <Properties />
             <RealName xml:space="preserve">Fat Dave</RealName>
             <ScriptName>cfatdave</ScriptName>
@@ -3932,14 +4042,14 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>12</SpeechColor>
             <SpeechView>35</SpeechView>
-            <StartX>583</StartX>
-            <StartY>463</StartY>
+            <StartX>204</StartX>
+            <StartY>285</StartY>
             <StartingRoom>26</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <UseRoomAreaLighting>True</UseRoomAreaLighting>
-            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaScaling>False</UseRoomAreaScaling>
             <Interactions>
               <Event Index="0">cfatdave_Look</Event>
               <Event Index="1">cfatdave_Interact</Event>
@@ -4142,8 +4252,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>2047</SpeechColor>
             <SpeechView>44</SpeechView>
-            <StartX>344</StartX>
-            <StartY>335</StartY>
+            <StartX>149</StartX>
+            <StartY>172</StartY>
             <StartingRoom>26</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -4178,14 +4288,14 @@
             <MovementSpeedY>0</MovementSpeedY>
             <NormalView>31</NormalView>
             <Properties />
-            <RealName>Johan</RealName>
+            <RealName>Jimmy</RealName>
             <ScriptName>cFat</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
-            <SpeechColor>48</SpeechColor>
+            <SpeechColor>10218</SpeechColor>
             <SpeechView>32</SpeechView>
-            <StartX>110</StartX>
-            <StartY>150</StartY>
+            <StartX>165</StartX>
+            <StartY>178</StartY>
             <StartingRoom>23</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -4255,8 +4365,8 @@ return
 @3
 Char1: Will the insurance cover if I smash the console ?
 head1: The insurance will not cover you smashing the console.
-head1: In fact smashing the console might very well make you liable to pay damages up to . . 
-Char1: Are you fucking serious ? Pay damages, I am about to crash ! 
+head1: In fact smashing the console might very well make you liable to pay damages up to . .
+Char1: Are you fucking serious ? Pay damages, I am about to crash !
 head1: The crash is covered by insurance, you smashing the console is not.
 option-off 3
 option-on 5
@@ -4275,7 +4385,7 @@ head1: Try to say something inspiring.
 Char1: Like this ?
   Wait(20);
 Char1: AAAAAAAAAAHHHHHHHH! I AM GONNA DIE !
-head1:Hmmmm, no try for something that has more mass appeal if you please ?
+head1: Hmmmm, no try for something that has more mass appeal if you please ?
 option-off 5
 option-on 6
 option-on 7
@@ -4370,10 +4480,10 @@ return
 option-off 3
 return
 @1
-Ego:Hello ?
+Ego: Hello ?
 Fisherman: Hallo !
-Ego:Ehm, are you all right ?
-Fisherman:Eg ja, eg har det fint, ka med deg daa ?
+Ego: Ehm, are you all right ?
+Fisherman: Eg ja, eg har det fint, ka med deg daa ?
 return
 
 @2
@@ -4385,7 +4495,7 @@ return
 Ego: Reddy, my name is Reddy.
 return
 @4
-fisherman:Hadet
+fisherman: Hadet
  fishtalk1 = 0;
 Stop
 ]]></Script>
@@ -4570,13 +4680,14 @@ option-off 8
 return
 @9
   cFat.FaceDirection(eDirectionDown);
-Stop]]></Script>
+Stop
+]]></Script>
             <DialogOptions>
               <DialogOption>
                 <ID>1</ID>
                 <Say>True</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Hi Johan</Text>
+                <Text xml:space="preserve">Hi Jimmy</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
@@ -4655,7 +4766,7 @@ Ego: Oh thanks.
 option-off 2
 return
 @3
-Cantine: FOOD !? 
+Cantine: FOOD !?
 Ego: Yes ?
 Cantine: ALL RIGHT, HERE'S THE MENU. IF YOU UNGRATEFUL HEATHENS CANNOT APPRECIATE MY MEALS, THEN JOIN THE REST OF YOUR ILK IN THE STYGIAN PITS OF HELL !
 Ego: Thanks.
@@ -4820,6 +4931,10 @@ option-off 3
 option-on 2
 return
 @4
+Brah: Hahahaha, oh fuck me that's rich. Nobody likes you, fucking looser.
+option-off 4
+option-off 3
+option-on 2
 return
 ]]></Script>
             <DialogOptions>
@@ -4846,6 +4961,205 @@ return
                 <Say>True</Say>
                 <Show>False</Show>
                 <Text xml:space="preserve">Because you like me</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>8</ID>
+            <Name>dFatDave</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+fatdave: Sup Red, what can I do you for ?
+option-off 1
+option-on 2
+option-on 3
+return
+@2
+fatdave: Why ?
+option-off 1
+option-off 2
+option-off 3
+option-on 4
+option-on 5
+option-off 18
+return
+@3
+fatdave: I was gonna give it to the washer myself honest, but yaknow if you wanna do that for me, sure..cheers.
+  cEgo.Walk(182,312,eBlock,eWalkableAreas);
+    cEgo.FaceDirection(eDirectionUp);
+  cEgo.LockView(3);
+  cEgo.Animate(0, 5, eOnce, eBlock);
+  object[2].Visible = false;
+  cEgo.Say("Ewwww, this needs a serious wash");
+  cEgo.LockView(1);
+  cEgo.Walk(155, 300, eBlock, eWalkableAreas);
+  cEgo.FaceCharacter(cfatdave);
+option-off 3
+return
+@4
+fatdave: Well I am sorry Red, I think I need it more than you in that case.
+ego: What are you gonna use it for ?
+  Wait(60);
+fatdave: It's my bucket Red, gimme a good reason, else I am gonna keep it.
+option-on 2
+option-on 3
+option-off 4
+option-off 5
+option-on 18
+return
+@5
+fatdave: Ooookay ? I didn't realise you were a janitor.
+ego: Still an engineer Dave. I just need to transport water.
+fatdave: Seems a bit vague Red. You feeling all right ?
+ego: Yeah.. yeah.. forget about the bucket for now.
+option-on 2
+option-on 3
+option-off 4
+option-off 5
+option-on 18
+return
+@6
+fatdave: Sure, happy trail.
+  cEgo.ChangeRoom(2);
+Stop
+@7
+fatdave: Sure, happy trail.
+  cEgo.ChangeRoom(13,98,311);
+Stop
+@8
+return
+@9
+return
+@10
+return
+@11
+return
+@12
+return
+@13
+return
+@14
+return
+@15
+return
+@16
+return
+@17
+return
+@18
+Stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Sup Dave</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Can I have your bucket ?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Can I have your plate ?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">I... I dunno </Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">I need to fill it with water</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Can I go into space [DEBUG]</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Can I go into the engine room ? DEBUG</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>8</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>9</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>10</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>11</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>12</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>13</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>14</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>15</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>16</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>17</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>18</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text>Nevermind</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -4907,7 +5221,7 @@ return
       </MouseCursor>
       <MouseCursor>
         <Animate>False</Animate>
-        <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
+        <AnimateOnlyOnHotspots>True</AnimateOnlyOnHotspots>
         <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
         <AnimationDelay>5</AnimationDelay>
         <HotspotX>0</HotspotX>
@@ -4916,7 +5230,7 @@ return
         <Image>180</Image>
         <Name xml:space="preserve">Use inv</Name>
         <StandardMode>False</StandardMode>
-        <View>0</View>
+        <View>51</View>
       </MouseCursor>
       <MouseCursor>
         <Animate>False</Animate>
@@ -4936,8 +5250,8 @@ return
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
         <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
         <AnimationDelay>5</AnimationDelay>
-        <HotspotX>13</HotspotX>
-        <HotspotY>12</HotspotY>
+        <HotspotX>0</HotspotX>
+        <HotspotY>0</HotspotY>
         <ID>6</ID>
         <Image>189</Image>
         <Name>Pointer</Name>
@@ -5403,6 +5717,11 @@ return
           <Name>viewdroid</Name>
           <Type>int</Type>
         </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>1</DefaultValue>
+          <Name>titletrigger1</Name>
+          <Type>int</Type>
+        </GlobalVariable>
       </Variables>
     </GlobalVariables>
     <Sprites>
@@ -5655,7 +5974,7 @@ return
                   </Sprite>
                   <Sprite Slot="2116" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName>D:\01 - Projects\01 - Caesarcub\02 - Games\2017-AGS-Templates\sci\Resources\Verbs-Round\Cursor.png</FileName>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\verbs\cursor1.bmp</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -5664,13 +5983,13 @@ return
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
                       <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportMethod>TopLeft</ImportMethod>
                       <ImportAlphaChannel>False</ImportAlphaChannel>
                     </Source>
                   </Sprite>
                   <Sprite Slot="2117" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName>D:\01 - Projects\01 - Caesarcub\02 - Games\2017-AGS-Templates\sci\Resources\Verbs-Round\Cursor_hover.png</FileName>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\verbs\cursor2.bmp</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -5679,13 +5998,13 @@ return
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
                       <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportMethod>TopLeft</ImportMethod>
                       <ImportAlphaChannel>False</ImportAlphaChannel>
                     </Source>
                   </Sprite>
                   <Sprite Slot="2118" Width="30" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName>D:\01 - Projects\01 - Caesarcub\02 - Games\2017-AGS-Templates\sci\Resources\Verbs-Round\Cursor_pushed.png</FileName>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\verbs\cursor3.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -5694,13 +6013,13 @@ return
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
                       <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportMethod>TopLeft</ImportMethod>
                       <ImportAlphaChannel>False</ImportAlphaChannel>
                     </Source>
                   </Sprite>
                   <Sprite Slot="2119" Width="32" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName />
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\verbs\cursor3.bmp</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>27</ImportHeight>
@@ -6355,7 +6674,7 @@ return
                   </Sprite>
                   <Sprite Slot="2166" Width="9" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName />
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\ui\slider.bmp</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>11</ImportHeight>
@@ -6364,7 +6683,7 @@ return
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
                       <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportMethod>TopLeft</ImportMethod>
                       <ImportAlphaChannel>False</ImportAlphaChannel>
                     </Source>
                   </Sprite>
@@ -6853,18 +7172,48 @@ return
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="189" Width="25" Height="25" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                  <Sprite Slot="189" Width="11" Height="15" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>C:\Users\tsuke\Documents\ags back\cursors\cursor.png</FileName>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\verbs\cursorpointy.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
-                      <ImportHeight>25</ImportHeight>
-                      <ImportWidth>25</ImportWidth>
+                      <ImportHeight>15</ImportHeight>
+                      <ImportWidth>11</ImportWidth>
                       <ImportAsTile>False</ImportAsTile>
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
                       <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportMethod>TopRight</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="550" Width="9" Height="13" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\cursors\small cursor2.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>13</ImportHeight>
+                      <ImportWidth>9</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>BottomLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="551" Width="9" Height="13" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\cursors\small cursor3.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>13</ImportHeight>
+                      <ImportWidth>9</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>BottomLeft</ImportMethod>
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
@@ -8300,6 +8649,111 @@ return
                       <RemapToGamePalette>False</RemapToGamePalette>
                       <RemapToRoomPalette>False</RemapToRoomPalette>
                       <ImportMethod>PaletteIndex0</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="528" Width="170" Height="63" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\objects\cantinestuff.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>63</ImportHeight>
+                      <ImportWidth>170</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="529" Width="39" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\wallpaper\spare parts 2.0.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>50</ImportHeight>
+                      <ImportWidth>39</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="530" Width="39" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\wallpaper\spare parts 2.1.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>50</ImportHeight>
+                      <ImportWidth>39</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="531" Width="39" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\wallpaper\spare parts 2.3.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>50</ImportHeight>
+                      <ImportWidth>39</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="532" Width="50" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\objects\sign utility 2.0.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>16</ImportHeight>
+                      <ImportWidth>50</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="533" Width="50" Height="17" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\objects\private sign.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>17</ImportHeight>
+                      <ImportWidth>50</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="538" Width="32" Height="43" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\objects\Bedroom door.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>43</ImportHeight>
+                      <ImportWidth>32</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>BottomLeft</ImportMethod>
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
@@ -10417,6 +10871,81 @@ return
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
+              <Sprite Slot="539" Width="25" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\heroine\uppickupdown1.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>60</ImportHeight>
+                  <ImportWidth>25</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>BottomLeft</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="540" Width="25" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\heroine\uppickupdown2.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>60</ImportHeight>
+                  <ImportWidth>25</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>BottomLeft</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="541" Width="25" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\heroine\uppickupdown3.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>60</ImportHeight>
+                  <ImportWidth>25</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>BottomLeft</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="542" Width="25" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\heroine\uppickupdown4.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>60</ImportHeight>
+                  <ImportWidth>25</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>BottomLeft</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="543" Width="25" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\heroine\uppickupdown5.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>60</ImportHeight>
+                  <ImportWidth>25</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>BottomLeft</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="gExitGameImport">
@@ -11327,34 +11856,94 @@ return
           <SpriteFolder Name="cfatdaveImport">
             <SubFolders />
             <Sprites>
-              <Sprite Slot="270" Width="83" Height="119" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+              <Sprite Slot="270" Width="44" Height="81" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
-                  <FileName />
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\chars\fatdave1.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
-                  <ImportHeight>0</ImportHeight>
-                  <ImportWidth>0</ImportWidth>
+                  <ImportHeight>81</ImportHeight>
+                  <ImportWidth>44</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
                   <RemapToRoomPalette>False</RemapToRoomPalette>
-                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportMethod>TopLeft</ImportMethod>
                   <ImportAlphaChannel>False</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="271" Width="83" Height="119" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+              <Sprite Slot="271" Width="44" Height="81" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                 <Source>
-                  <FileName />
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\chars\fatdave2.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
-                  <ImportHeight>0</ImportHeight>
-                  <ImportWidth>0</ImportWidth>
+                  <ImportHeight>81</ImportHeight>
+                  <ImportWidth>44</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>TopLeft</ImportMethod>
+                  <ImportAlphaChannel>False</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="527" Width="44" Height="81" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\chars\fatdave3.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>81</ImportHeight>
+                  <ImportWidth>44</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>BottomRight</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="535" Width="44" Height="81" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\chars\fatdave4.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>81</ImportHeight>
+                  <ImportWidth>44</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
                   <RemapToRoomPalette>False</RemapToRoomPalette>
                   <ImportMethod>LeaveAsIs</ImportMethod>
-                  <ImportAlphaChannel>False</ImportAlphaChannel>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="536" Width="44" Height="81" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\chars\fatdave1 talk 1.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>81</ImportHeight>
+                  <ImportWidth>44</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="537" Width="44" Height="81" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\chars\fatdave1 talk 2.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>81</ImportHeight>
+                  <ImportWidth>44</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
             </Sprites>
@@ -12305,6 +12894,81 @@ return
                   <RemapToRoomPalette>False</RemapToRoomPalette>
                   <ImportMethod>LeaveAsIs</ImportMethod>
                   <ImportAlphaChannel>False</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="545" Width="34" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\heroine\rightpickupdown1.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>60</ImportHeight>
+                  <ImportWidth>34</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>TopLeft</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="546" Width="34" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\heroine\rightpickupdown2.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>60</ImportHeight>
+                  <ImportWidth>34</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>TopLeft</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="547" Width="34" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\heroine\rightpickupdown3.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>60</ImportHeight>
+                  <ImportWidth>34</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>TopLeft</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="548" Width="34" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\heroine\rightpickupdown4.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>60</ImportHeight>
+                  <ImportWidth>34</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>TopLeft</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="549" Width="34" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\heroine\rightpickupdown5.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>60</ImportHeight>
+                  <ImportWidth>34</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>TopLeft</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
             </Sprites>
@@ -14552,6 +15216,36 @@ return
               <RemapToGamePalette>False</RemapToGamePalette>
               <RemapToRoomPalette>False</RemapToRoomPalette>
               <ImportMethod>BottomLeft</ImportMethod>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="534" Width="35" Height="61" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+            <Source>
+              <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\objects\fridge 2.0.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>61</ImportHeight>
+              <ImportWidth>35</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>PaletteIndex0</ImportMethod>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="544" Width="57" Height="234" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\tsuke\OneDrive\Documents\ags back\objects\door 2.0.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>234</ImportHeight>
+              <ImportWidth>57</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>False</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
@@ -17401,13 +18095,6 @@ return
                     <Image>270</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>1</ID>
-                    <Image>271</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
                 </Frames>
               </Loop>
               <Loop>
@@ -17462,7 +18149,21 @@ return
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
-                    <Image>271</Image>
+                    <Image>270</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>536</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>537</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -19576,42 +20277,77 @@ return
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>474</Image>
+                    <Image>316</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
-                    <Image>475</Image>
+                    <Image>545</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>2</ID>
-                    <Image>476</Image>
+                    <Image>546</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>3</ID>
-                    <Image>477</Image>
+                    <Image>547</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>4</ID>
-                    <Image>478</Image>
+                    <Image>548</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>5</ID>
-                    <Image>477</Image>
+                    <Image>549</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>548</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>547</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>8</ID>
+                    <Image>546</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>9</ID>
+                    <Image>545</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>10</ID>
+                    <Image>316</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -19624,42 +20360,77 @@ return
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>474</Image>
+                    <Image>325</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
-                    <Image>475</Image>
+                    <Image>539</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>2</ID>
-                    <Image>476</Image>
+                    <Image>540</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>3</ID>
-                    <Image>477</Image>
+                    <Image>541</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>4</ID>
-                    <Image>478</Image>
+                    <Image>542</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>5</ID>
-                    <Image>477</Image>
+                    <Image>543</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>542</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>541</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>8</ID>
+                    <Image>540</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>9</ID>
+                    <Image>539</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>10</ID>
+                    <Image>325</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -20071,6 +20842,201 @@ return
                   </ViewFrame>
                 </Frames>
               </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>530</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>529</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>50</ID>
+            <Name>fatdaveidle</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>270</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>271</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>527</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>535</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>270</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>271</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>527</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>535</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>270</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>271</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>527</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>535</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>270</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>271</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>527</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>535</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>51</ID>
+            <Name>itemcurs</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>2059</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>550</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>551</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
             </Loops>
           </View>
         </Views>
@@ -20081,6 +21047,78 @@ return
       <ScriptFolder Name="Main">
         <SubFolders />
         <ScriptAndHeaders>
+          <ScriptAndHeader>
+            <ScriptAndHeader_Header>
+              <Script>
+                <FileName>Utils.ash</FileName>
+                <Name />
+                <Description />
+                <Author />
+                <Version />
+                <Key>790399415</Key>
+                <IsHeader>True</IsHeader>
+              </Script>
+            </ScriptAndHeader_Header>
+            <ScriptAndHeader_Script>
+              <Script>
+                <FileName>Utils.asc</FileName>
+                <Name />
+                <Description />
+                <Author />
+                <Version />
+                <Key>790399415</Key>
+                <IsHeader>False</IsHeader>
+              </Script>
+            </ScriptAndHeader_Script>
+          </ScriptAndHeader>
+          <ScriptAndHeader>
+            <ScriptAndHeader_Header>
+              <Script>
+                <FileName>ObjectPool.ash</FileName>
+                <Name>ObjectPool</Name>
+                <Description>Tracks a list of reusable object IDs</Description>
+                <Author>Ivan Mogilko</Author>
+                <Version>1.0.0</Version>
+                <Key>1227444846</Key>
+                <IsHeader>True</IsHeader>
+              </Script>
+            </ScriptAndHeader_Header>
+            <ScriptAndHeader_Script>
+              <Script>
+                <FileName>ObjectPool.asc</FileName>
+                <Name>ObjectPool</Name>
+                <Description>Tracks a list of reusable object IDs</Description>
+                <Author>Ivan Mogilko</Author>
+                <Version>1.0.0</Version>
+                <Key>1227444846</Key>
+                <IsHeader>False</IsHeader>
+              </Script>
+            </ScriptAndHeader_Script>
+          </ScriptAndHeader>
+          <ScriptAndHeader>
+            <ScriptAndHeader_Header>
+              <Script>
+                <FileName>DragDrop.ash</FileName>
+                <Name />
+                <Description />
+                <Author />
+                <Version />
+                <Key>626626866</Key>
+                <IsHeader>True</IsHeader>
+              </Script>
+            </ScriptAndHeader_Header>
+            <ScriptAndHeader_Script>
+              <Script>
+                <FileName>DragDrop.asc</FileName>
+                <Name />
+                <Description />
+                <Author />
+                <Version />
+                <Key>626626866</Key>
+                <IsHeader>False</IsHeader>
+              </Script>
+            </ScriptAndHeader_Script>
+          </ScriptAndHeader>
           <ScriptAndHeader>
             <ScriptAndHeader_Header>
               <Script>
@@ -20313,6 +21351,45 @@ See KeyboardMovement.txt for details.
                 <Type>2</Type>
                 <FileLastModifiedDate>2022-08-17 11:58:43Z</FileLastModifiedDate>
               </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>23</ID>
+                <Index>28</Index>
+                <ScriptName>aVibing_Over_Venus</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\tsuke\OneDrive\Documents\ags back\music\Vibing Over Venus.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2024-01-27 17:07:08Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>24</ID>
+                <Index>29</Index>
+                <ScriptName>aAgnus_Dei_X</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\tsuke\OneDrive\Documents\ags back\music\Agnus Dei X.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2024-01-27 21:50:01Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>25</ID>
+                <Index>30</Index>
+                <ScriptName>aFanfare_for_Space</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\tsuke\OneDrive\Documents\ags back\music\Fanfare for Space.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2024-01-27 21:48:48Z</FileLastModifiedDate>
+              </AudioClip>
             </AudioClips>
             <AudioClipFolder>
               <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
@@ -20501,7 +21578,11 @@ See KeyboardMovement.txt for details.
         <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
       </AudioClipType>
     </AudioClipTypes>
-    <Translations />
+    <Translations>
+      <Translation>
+        <Name>Norwegian</Name>
+      </Translation>
+    </Translations>
   </Game>
   <Component Name="FileCommands" />
   <Component Name="BuildCommands" />
@@ -20526,7 +21607,9 @@ See KeyboardMovement.txt for details.
   <Component Name="Rooms" />
   <Component Name="Translations" />
   <Component Name="MusicAndSpeech">
-    <SpeechVoxFiles />
+    <SpeechVoxFiles>
+      <Folder Name="speech" />
+    </SpeechVoxFiles>
     <PamFiles>
       <Folder Name="speech" />
     </PamFiles>
